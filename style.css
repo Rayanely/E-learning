@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+body {
+    background-color: #FFF1DC;
+    font-family: "Titillium Web", sans-serif;
+    margin: 0 auto;
+}
+
+/*Styles voor homepage*/
+.head-content {
+    color: #FF8787;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: left;
+    margin-top: 200px;
+    padding-left: 240px;
+}
+
+.head-content h1:nth-child(2) {
+    color: #FF5757;
+}
+
+.btn_oefen {
+    background-color: #FF5757;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 200px;
+    font-size: 14px;
+    border: 1px solid #FF8787;
+}
+
+.btn_oefen span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn_oefen span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn_oefen:hover span {
+    padding-right: 25px;
+}
+
+.btn_oefen:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.hoofd-pic {
+    float: right;
+    margin-top: -230px;
+    padding-right: 110px;
+}
+
+/*Styles voor inlog-registerpagina*/
+.blok {
+    background-color: #DEDDFA;
+    height: 450px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 90px;
+    border-radius: 40px;
+    padding-top: 20px;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 20%;
+
+}
+
+.inlog_form {
+    text-align: center;
+
+}
+
+.login_input {
+    background-color: #DEDDFA;
+    width: 60%;
+    padding: 6px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    margin-top: 20px;
+}
+
+.login_submit {
+    font-size: 16px;
+    padding: 6px 17px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 4px 20px 0px #FFF1DC;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.show_password {
+    cursor: pointer;
+    margin-left: -25px;
+}
+
+#geslacht {
+    padding: 4px 4px;
+    border-radius: 30px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+/*Styles voor overzicht.php*/
+
+.hoofd_text h1,
+h2 {
+    text-align: center;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hfstukken {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.button_lijst {
+    padding: 10px 120px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    background-color: azure;
+}
+
+.button_lijst:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button_lijst:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.button_lijst::after {
+    content: "";
+    display: inline-block;
+    height: 30%;
+    width: 30%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.button_lijst {
+    animation: moveInBottom 2s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.button_add {
+    margin-top: -40px;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: white;
+    border: none;
+}
+
+.button_add:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#logout {
+    cursor: pointer;
+    float: right;
+    color: black;
+    padding-right: 70px;
+    margin-top: -80px;
+    transition: .2s;
+}
+
+#btn_check {
+    padding: 8px 156px;
+    border-radius: 16px;
+    cursor: pointer;
+    margin: 4px;
+    transition: .2s;
+    font-weight: bold;
+    background-color: white;
+    width: 370px;
+}
+
+#btn_check:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*Styles voor addlijst.php*/
+.form_blok {
+    background-color: #DEDDFA;
+    min-height: 450px;
+    width: 475px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 40px;
+    padding-top: 10px;
+}
+
+.table {
+    padding-top: 20px;
+}
+
+.input_woord {
+    padding: 6px 12px;
+    border-radius: 25px;
+}
+
+#add_btn,
+#del_btn,
+#done_btn {
+    padding: 4px 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 7px;
+    background-color: white;
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+#add_btn:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border: 1px solid black;
+    transition: .3s ease-in-out;
+    background-color: blue;
+}
+
+#del_btn:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border: 1px solid black;
+    transition: .3s;
+    background-color: red;
+}
+
+#done_btn:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border: 1px solid black;
+    transition: .3s;
+    background-color: green;
+}
+
+#terug_btn,
+#terug_btn a {
+    padding: 4px 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 7px;
+    background-color: white;
+    border: none;
+    width: fit-content;
+    color: black;
+    text-decoration: none;
+}
+
+#terug_btn:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border: 1px solid black;
+    transition: .3s;
+}
+
+.buttons {
+    padding-bottom: 15px;
+}
+
+/*Styles voor crud.php*/
+.table_crud {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-top: 70px;
+    width: 880px;
+}
+
+.table_crud thead tr {
+    background-color: #FF8787;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table_crud th,
+.table_crud td {
+    padding: 12px 30px
+}
+
+.table_crud tbody tr {
+    border-bottom: 1px solid #FF8787;
+}
+
+.table_crud tbody tr:nth-of-type(even) {
+    background-color: #FF8787;
+}
+
+.table_crud tbody tr:last-of-type {
+    border-bottom: 2px solid #FF8787;
+}
+
+.tabtable_crudle tbody tr.actief {
+    font-weight: bold;
+}
+
+.trash a {
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 4px 8px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.trash:hover {
+    transition: .4s;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.hoofdstuk_naam {
+    margin: 0 auto;
+    display: flex;
+    padding: 4px 8px;
+    border-radius: 15px;
+}
+
+/* Styles voor opdrachten.php */
+
+#check {
+    display: block;
+    margin: 0 auto;
+    margin-top: 140px;
+    padding: 8px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+#ant_veld{
+    padding: 6px 12px;
+    border-radius: 25px;
+    display: flex;
+    margin: 0 auto;
+}
+
+#vraag{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 38px;
+    color: black;
+}
+
+#aantal_goed{
+    text-align: center;
+}
+/* Voor mobiel */
+@media(max-width: 768px) {
+
+    .table_crud,
+    .table_crud tbody,
+    .table_crud tr,
+    .table_crud td {
+        display: flex;
+        flex-direction: column;
+        width: 380px;
+    }
+
+    .table_crud tr {
+        margin-bottom: 15px;
+    }
+
+    .table_crud tbody tr td {
+        padding-left: 35%;
+        position: relative;
+        padding-right: 8%;
+    }
+
+    .table_crud td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+
+    }
+
+}
